@@ -1,0 +1,13 @@
+@startuml
+
+class JMenuBar
+
+class MenuFactory {
+
+MenuFactory : JMenu baueReiter(String name, ArrayList<String>)
+
+}
+
+JMenuBar <|-- MenuFactory
+
+@enduml

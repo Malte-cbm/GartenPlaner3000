@@ -1,0 +1,15 @@
+View: Layouting, Datenvisualisierung, Benutzerinteraktion, kurz: Das UI, sowohl Darstellung, als auch entgegennahme
+
+Controller: Benutzerführung, Eingabevalidierung, Vermittlung zwischen View und Model
+
+Model: Anwendungslogik, Datenhaltung
+
+Ablauf:
+
+1.View erhält Eingabeereignis, weitergabe an den Controller
+2. Controller prüft Eingabe, transformiert sie in einen Aufruf des Model (Zustandsänderung)
+3. Model erhält Nachricht, dass vom Nutzer Zustandsänderung angefordert wird, berechnet die Änderung, meldet die Änderung des Zustands an die View(mittels Observer pattern)
+4. View reagiert, indem sie Aktuelle Daten aus dem Model holt und UI ändert, anschließend geht die Kontrolle zurück an den Controller
+5. Controller wechselt eventuell Ansicht o.Ä.
+
+

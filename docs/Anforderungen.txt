@@ -1,0 +1,33 @@
+Gartenplaner 3000
+
+Funktionale Anforderungen
+
+Anforderung: <Neue Gärten und Beete anlegen>
+Beschreibung: <Der User soll in der Lage sein, neue Orte für Pflanzen einzupflegen und räumlich anzuordnen.>
+
+Anforderung: <Pflanzen in Beete setzen>
+Beschreibung: <Der User soll für jedes Beet in der Lage sein, eine zeitliche Abfolge der Bepflanzung festzulegen.>
+
+Anforderung: <Pflanzen einpflegen>
+Beschreibung: <Der User soll neue Arten von Pflanzen mit ihren botanischen Merkmalen einpflegen können.>
+
+Anforderung: <Planung anzeigen>
+Beschreibung: <Der User soll einen zeitlichen Ablauf seines gesamten Gartens anzeigen können (graphisch und in Sti		  chpunkten).>
+
+Anforderung: <Aufgaben anzeigen>
+Beschreibung: <Wählt der User einen spezifischen Monat, sollen Aufgaben wie Vorzucht, Aussaat, Ernte etc die zu erl		  edigen sind angezeigt bekommen.>
+
+Anforderung: <Daten speichern und laden>
+Beschreibung: <Der User soll in der Lage sein, seine Bearbeitungen abzuspeichern und zu laden.>
+
+Anforderung: <Schnittstelle Datenbank>
+Beschreibung: <Die Daten sollen in einer mySQL-Datenbank gespeichert und aus ihr geladen werden.>
+
+Anforderung: <GUI erstellen>
+Beschreibung: <Mit Hilfe von awt und swing muss ein GUI zur Anzeige und Steuerung erstellt werden.>
+
+
+Nicht-funktionale Anforderungen
+
+Anforderung: <MVC-Design>
+Beschreibung: <Objektorientierte Programmierung.>

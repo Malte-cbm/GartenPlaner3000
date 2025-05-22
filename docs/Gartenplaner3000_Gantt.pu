@@ -1,0 +1,42 @@
+
+@startgantt Gantt-Diagramm
+
+<style>
+
+root {BackGroundColor: #f5f5f5;}
+
+</style>
+--Analyse--
+
+[Anforderungen erstellen] requires 1 day
+[Use-Case-Diagramme erstellen] requires 1 day
+[Use-Case-Diagramme erstellen] starts at [Anforderungen erstellen]'s end
+[GANTT-Diagramm erstellen] requires 1 day
+
+--Entwurf--
+[Klassendiagramme erstellen] requires 1 day
+[Klassendiagramme erstellen] starts at [Use-Case-Diagramme erstellen]'s end
+[Relationales Datenbankmodell] requires 1 day
+[Relationales Datenbankmodell] starts at [Use-Case-Diagramme erstellen]'s end
+
+--Realisierung--
+[Github Repository anlegen] requires 1 day
+[Github Repository anlegen] starts at [Klassendiagramme erstellen]'s end
+[SQLite3-Datenbank anlegen] requires 1 day
+[SQLite3-Datenbank anlegen] starts at [Klassendiagramme erstellen]'s end
+[Tabellen anlegen] requires 1 day
+[Tabellen anlegen] starts at [SQLite3-Datenbank anlegen]'s end
+[SQL-Zugriffe implentieren] requires 2 days
+[SQL-Zugriffe implentieren] starts at [Tabellen anlegen]'s end 
+[Klassen implentieren] requires 3 days
+[Klassen implentieren] starts at [Tabellen anlegen]'s end
+
+--Testing--
+[Testklassen erstellen] requires 2 days
+[Testklassen erstellen] starts at [Klassen implentieren]'s end
+[Unit-Tests durchfuehren] requires 1 day
+[Unit-Tests durchfuehren] starts at [Testklassen erstellen]'s end
+
+--Dokumentation--
+
+@endgantt
