@@ -21,7 +21,14 @@ public class GV2 extends JComponent implements Subscriber{
 	this.add( bv );
 	this.repaint();
     }
-    
+
+    /*public void alleNeu(GartenModel gm){
+	this.gm = gm;
+	for (BeetModel beet : gm.zeigeAlleBeete()){
+	    BeetView bv = new BeetView(beet);
+	    addBeet(bv);
+	}
+	}*/
 
     public GV2(GartenModel gm){
 	
@@ -98,6 +105,7 @@ public class GV2 extends JComponent implements Subscriber{
     public void update (Object arg){
 	if (arg instanceof GartenModel gm){
 	    this.gm = gm;
+	    repaint();
 	}
     }
 }

@@ -58,6 +58,7 @@ public class Funktionen {
 		GartenModel loadG = gc.ladeGarten(lb.wahl);
 		this.bc.setGM(loadG);
 		this.gv = new GV2(loadG);
+		this.gc.ladeBeete(this.gv);
 		hf.setzeBild(this.gv);
 	    }
 	    break;
@@ -73,18 +74,29 @@ public class Funktionen {
 		BeetMaske bm = new BeetMaske(bc);
 
 		
-		BeetView zwischenbums = bc.neuBeetModel (bm.xPos+20, bm.yPos+20, bm.breite*40, bm.tiefe*40);
+		BeetView zwischenbums = bc.neuBeetModel (bm.xPos*40+20, bm.yPos*40+20, bm.breite*40, bm.tiefe*40, bm.neu, 0);
 		
 		this.gv.addBeet(zwischenbums);
 		
 	    }
 	    else{
-	    JOptionPane.showMessageDialog(null, "Ohne Garten keine Beete");
+		JOptionPane.showMessageDialog(null, "Ohne Garten keine Beete");
 	    }
 	    break;
 
 	case "Beet bearbeiten":
-	    JOptionPane.showMessageDialog(null, "Du bist 1 Motherfucker");
+    	    if (gc.gm != null){
+		
+
+		ChangeBeet cb = new ChangeBeet(bc);
+		gc.changeBeet(cb);
+		//this.gv.alleNeu();
+		JOptionPane.showMessageDialog(null, "Daten geaendert! Fingers crossed!");
+	    }
+	    else {
+		JOptionPane.showMessageDialog(null, "Ohne Garten keine Beete");
+	    }
+	    
 	    break;
 	}
     }

@@ -35,15 +35,15 @@ public class Hauptfenster extends JFrame implements Subscriber{
 	im2.add( "Beet bearbeiten" );
 
 	ArrayList<String> im3 = new ArrayList<String>();
-	im3.add( "Guckstu" );
-	im3.add( "Settings" );
+	im3.add( "Pflanzenkatalog" );
+	im3.add( "Etwas einpflanzen" );
 
 	
 	HashMap<String, ArrayList<String>> hm = new HashMap<String, ArrayList<String>>();
 
 	hm.put("Garten", im1);
 	hm.put("Beete", im2);
-	hm.put("pifpaf", im3);
+	hm.put("Pflanzen", im3);
 	this.hashmenu = hm;
 	MenuFactory menubar = new MenuFactory(this.hashmenu, this.ff);
 	this.setJMenuBar(menubar);

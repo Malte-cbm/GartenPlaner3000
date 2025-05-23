@@ -20,6 +20,7 @@ public class BeetView extends JComponent implements Subscriber{
 	this.setBounds(bm.getX(), bm.getY(), bm.getBreite(), bm.getTiefe());
 	
     }
+    
 
     @Override
     protected void paintComponent(Graphics g){
@@ -30,8 +31,7 @@ public class BeetView extends JComponent implements Subscriber{
 	g2d.setRenderingHints(rh);
 
 	
-	//	Rectangle2D.Double beetflaeche = new Rectangle2D.Double((bm.getX() +20),( bm.getY() +20),( bm.getBreite()*40), (bm.getTiefe()*40) ); //no hate, getbounds2D() war irgendwie nicht okay
-	Rectangle2D.Double beetflaeche = new Rectangle2D.Double( this.bm.getX(), this.bm.getY(), this.bm.getBreite(), this.bm.getTiefe());
+	Rectangle2D.Double beetflaeche = new Rectangle2D.Double( 0, 0, this.bm.getBreite(), this.bm.getTiefe());
 	g2d.setColor(bm.isSelected() ? Color.YELLOW :  new Color(128, 99, 102));
 	g2d.fill(beetflaeche);
 
@@ -42,6 +42,13 @@ public class BeetView extends JComponent implements Subscriber{
 
     @Override
     public void update (Object arg){
-	if (arg instanceof GartenModel){}
+	if (arg instanceof BeetModel bn){
+	    this.bm.removeObserver(this);
+	    System.out.println("UJHKSDJFKJSDBGKSDGHBD");
+	    this.bm = bn;
+	    this.bm.addObserver(this);
+	    this.setBounds(bm.getX(), bm.getY(), bm.getBreite(), bm.getTiefe());
+	    repaint();
+	}
     }
 }

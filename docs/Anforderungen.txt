@@ -12,16 +12,16 @@ Anforderung: <Pflanzen einpflegen>
 Beschreibung: <Der User soll neue Arten von Pflanzen mit ihren botanischen Merkmalen einpflegen können.>
 
 Anforderung: <Planung anzeigen>
-Beschreibung: <Der User soll einen zeitlichen Ablauf seines gesamten Gartens anzeigen können (graphisch und in Sti		  chpunkten).>
+Beschreibung: <Der User soll einen zeitlichen Ablauf seines gesamten Gartens anzeigen können (graphisch und in Stichpunkten).>
 
 Anforderung: <Aufgaben anzeigen>
-Beschreibung: <Wählt der User einen spezifischen Monat, sollen Aufgaben wie Vorzucht, Aussaat, Ernte etc die zu erl		  edigen sind angezeigt bekommen.>
+Beschreibung: <Wählt der User einen spezifischen Monat, sollen Aufgaben wie Vorzucht, Aussaat, Ernte etc die zu erledigen sind angezeigt bekommen.>
 
 Anforderung: <Daten speichern und laden>
 Beschreibung: <Der User soll in der Lage sein, seine Bearbeitungen abzuspeichern und zu laden.>
 
 Anforderung: <Schnittstelle Datenbank>
-Beschreibung: <Die Daten sollen in einer mySQL-Datenbank gespeichert und aus ihr geladen werden.>
+Beschreibung: <Die Daten sollen in einer sqlite-Datenbank gespeichert und aus ihr geladen werden.>
 
 Anforderung: <GUI erstellen>
 Beschreibung: <Mit Hilfe von awt und swing muss ein GUI zur Anzeige und Steuerung erstellt werden.>

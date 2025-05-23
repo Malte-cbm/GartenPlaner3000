@@ -15,6 +15,7 @@ public class BeetController{
 
     private ArrayList<BeetModel> bm;
     private GartenModel gm;
+    private GartenController gc;
     
     public BeetController(){
 	this.bm = new ArrayList<BeetModel>();
@@ -28,10 +29,41 @@ public class BeetController{
     public void setGM(GartenModel gm){
 	this.gm = gm;
     }
+
+    public int getSelected(){
+	int selection = 0;
+	for(BeetModel b : bm){
+	    if(b.isSelected()){
+		selection = b.getID();
+	    }
+	}
+	return selection;
+    }
+
+    public ArrayList<Integer> getSelectedData(int id){
+	ArrayList<Integer> res = new ArrayList<Integer>();
+	for (BeetModel beet : this.bm){
+	    if (beet.getID() == id){
+		res.add(beet.getX());
+		res.add(beet.getY());
+		res.add(beet.getBreite());
+		res.add(beet.getTiefe());
+	    }
+	}
+	return res;
+    }
+	    
+		
     
-    public BeetView neuBeetModel(int x, int y, int b, int t){
+    public BeetView neuBeetModel(int x, int y, int b, int t, boolean n, int id){
 	BeetModel jasohalt = new BeetModel(x, y);
 	jasohalt.setzeMasse( b, t);
+	if (n){
+	    jasohalt.setNew();
+	}
+	else {
+	    jasohalt.setID(id);
+	}
 	this.bm.add(jasohalt);
 	sendeBeetAnGM(jasohalt);
 

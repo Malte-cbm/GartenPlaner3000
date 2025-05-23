@@ -10,6 +10,7 @@ public class BeetModel {
     private int tiefe;
     private int posX;
     private int posY;
+    private boolean neu;
     private boolean selected;
     private ArrayList<PlantPoint> belegung;
 
@@ -20,7 +21,24 @@ public class BeetModel {
 	this.listeDerZuschauer = new ArrayList<Subscriber>();
 	this.posX = x;
 	this.posY = y;
+	this.neu = false;
     }
+
+    public boolean isNew(){
+	return this.neu;
+    }
+
+    public void setNew(){
+	this.neu = true;
+    }
+    public void setID(int id){
+	this.id = id;
+    }
+
+    public int getID(){
+	return this.id;
+    }
+	
 
     public void addObserver(Subscriber aha) {
         this.listeDerZuschauer.add(aha);
@@ -54,6 +72,11 @@ public class BeetModel {
     public void setzeMasse( int b, int t){
 	this.breite = b;
 	this.tiefe = t;
+    }
+
+    public void setzePos( int x, int y){
+	this.posX = x;
+	this.posY = y;
     }
 
     public int getBreite(){
